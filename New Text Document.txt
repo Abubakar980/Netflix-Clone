@@ -1,0 +1,16 @@
+PART 1
+
+1. netflix clone, jis my abhi sirf signuup ki logic bnai hy , 
+using MERN, postman sy test kiya hy , sahi chal rha hy, 
+mongodb my pass hash my store ho rha hy
+2. sigin logic, generatign token, (difficult to build alone)
+3. generate cookie at signup time
+4. logout functionality
+5. login funtionality
+
+
+
+PART 2
+FETCHING MOVIES with API
+FETCHING TRAILERS
+
