@@ -32,7 +32,7 @@ const AuthScreen = () => {
           <input 
             type="text"
             placeholder='Email Address'
-            className='p-2 rounded bg-black/80 border border-gray-700'
+            className='p-2 rounded w-2xs bg-black/80 border border-gray-700'
             value={email}
             onChange={(e) => setEmail(e.target.value)} 
           />

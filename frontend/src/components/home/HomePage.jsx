@@ -27,7 +27,7 @@ import HomeScreen from './HomeScreen';
 
 const HomePage = () => {
   const { user, isCheckingAuth } = useAuthStore();
-  console.log("Auth user is here: ", user);
+  // console.log("Auth user is here: ", user);
 
   // Jab tak authCheck chal raha ho, loading dikhayein
   if (isCheckingAuth) {

@@ -10,7 +10,3 @@ tvRoutes.get("/:id/similar", getSimilarTv);
 tvRoutes.get("/:category", getTvByCategory);
 
 export default tvRoutes;
-
-
-
-// continue from 1:35:00 

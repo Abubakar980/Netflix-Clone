@@ -26,7 +26,7 @@ app.use(cors({
 }));
 
 
-
+app.use('/uploads', express.static('public'));
 app.use(express.json()); // Middleware to parse JSON requests
 app.use(cookieParser()); // Middleware to parse cookies
 connectDB();
