@@ -8,6 +8,7 @@ import authRoutes from './routes/authRoutes.js';
 import movieRoutes from './routes/movieRoutes.js';
 import searchRoutes from './routes/searchRoutes.js';
 import tvRoutes from './routes/tvRoutes.js';
+import cors from 'cors';
 
 
 import { protectRoute } from './middleware/protectRoute.js';
@@ -18,6 +19,13 @@ dotenv.config({ path: './backend/.env' });
 
 const app = express();
 const PORT = process.env.PORT || 8000;
+
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true
+}));
+
+
 
 app.use(express.json()); // Middleware to parse JSON requests
 app.use(cookieParser()); // Middleware to parse cookies
