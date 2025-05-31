@@ -33,9 +33,12 @@ connectDB();
 
 
 app.use("/api/v1/auth",authRoutes)
-app.use("/api/v1/movie", protectRoute ,movieRoutes)
-app.use("/api/v1/tv", protectRoute ,tvRoutes)
-app.use("/api/v1/search", protectRoute ,searchRoutes)
+// app.use("/api/v1/movie", protectRoute ,movieRoutes)
+app.use("/api/v1/movie" ,movieRoutes)
+// app.use("/api/v1/tv", protectRoute ,tvRoutes)
+app.use("/api/v1/tv" ,tvRoutes)
+// app.use("/api/v1/search", protectRoute ,searchRoutes)
+app.use("/api/v1/search" ,searchRoutes)
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
