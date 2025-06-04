@@ -21,3 +21,15 @@
         background-position: 1000px 0;
     }
 }
+
+
+/* Custom class to hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+

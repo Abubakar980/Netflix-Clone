@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Navbar";
 import { Link } from "react-router-dom";
 import { Info, Play } from "lucide-react";
@@ -9,8 +9,8 @@ import MovieSlider from "../MovieSlider/MovieSlider";
 
 const HomeScreen = () => {
   const { trendingContent } = useGetTrendingContent();
-  // console.log("Trending Content:", trendingContent);
   const {contentType} = useContentStore();
+  const [imgLoading, setImgLoading] = useState(true);
 
   if (!trendingContent) {
     <div className="h-screen text-white relative">
@@ -24,11 +24,17 @@ const HomeScreen = () => {
     <div className="relative bg-cover min-h-screen text-white p-4 px-0 overflow-x-hidden">
       <Navbar />
 
+      {/* Shimmer Effect for Background Image Loading */}
+      {imgLoading && (
+        <div className="absolute top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center -z-10 shimmer"></div>
+      )}
+
       {/* Background Image */}
       <img
         src={ORIGINAL_IMG_BASE_URL + trendingContent?.backdrop_path}
         alt="Hero Img"
         className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        onLoad={() => setImgLoading(false)}
       />
 
       {/* Dark Overlay */}
