@@ -20,3 +20,6 @@ export const fetchFromTMDB = async (url) => {
 
   return response.data;
 }
+
+
+

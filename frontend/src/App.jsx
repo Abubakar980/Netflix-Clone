@@ -36,7 +36,7 @@ const App = () => {
         <Route path="/login" element={user ? <Navigate to="/" replace /> : <Login />} />
         <Route path="/signup" element={user ? <Navigate to="/" replace /> : <Signup />} />
         <Route path="/watch/:id" element={!user ? <Navigate to="/login" replace /> : <WatchPage />} />
-        <Route path="/search" element={!user ? <Navigate to="/login" replace /> : <SearchPage />} />
+        <Route path="/search" element={user ? <SearchPage/> : <Navigate to={"/login"}/>} />
       </Routes>
       <Footer />
       <Toaster />
